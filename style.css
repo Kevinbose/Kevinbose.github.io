@@ -157,6 +157,11 @@ section{
     position: relative;
     transition: 0.3s linear;
 }
+
+.cv{
+    color: white;
+}
+
 .typewriter span::before{
     content: "Developer";
     animation: words 15s infinite;

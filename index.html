@@ -39,9 +39,6 @@
         <section>
             <div class="main-container">
                 <div class="image profile-wrapper" data-aos="zoom-in-right" data-aos-duration="2500">
-                    <!-- <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
-                        <span>KevinBose</span>
-                    </div> -->
                     <div class="wavy-border profile-wrapper-1">
                         <div class="blob-background"></div>
                         <img src="profile.png" alt="My Profile" class="profile-img">
@@ -58,7 +55,7 @@
                         
                     </div>
                     <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
-                        <button>Download CV</button>
+                        <button onclick="downloadCV()">View CV</button>
                     </div>
                 </div>
             </div>
@@ -66,6 +63,16 @@
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
           AOS.init({offset:0});
+          
+            function downloadCV() {
+                const link = document.createElement("a");
+                link.href = "Kevin_Bose_J_CV.pdf";     // Correct relative path
+                link.download = "Kein_Bose_J_CV.pdf";     // File name during download
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
         </script>
         <!-- <script>
             function hamburg(){
